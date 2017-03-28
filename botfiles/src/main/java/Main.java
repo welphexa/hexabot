@@ -8,8 +8,7 @@ import pro.zackpollard.telegrambot.api.TelegramBot;
 
 public class Main {
 
-	private static String API_KEY = "318308864:AAEUZrVlUubl8e0kIjGPitx-R-hHy212e5s";
-	private static String API_KEY2 = "277392147:AAEe0hz0Q5Y-4fnfTPMDHLWsxQshu-6a2G0";
+	private static String API_KEY = "308864:AAEUZrVlUubl8e0kIjGPitx-R-hHy212e5s";
 	public static final int id = 202146102;
 	public static ArrayList<String> admins = new ArrayList<String>();
 
