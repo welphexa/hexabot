@@ -249,19 +249,23 @@ public class Data implements Listener {
 					}
 				}
 			});
-			
 		}
-		
-		
+	
 		if (receivedMessage.equals("/save") && Main.id == id) {
+			message = SendableTextMessage.builder().message("Test1").build();
+			telegramBot.sendMessage(event.getChat(), message);
 			try (BufferedWriter br = new BufferedWriter(new FileWriter(new File("Test")))) {
+				message = SendableTextMessage.builder().message("Test2").build();
+				telegramBot.sendMessage(event.getChat(), message);
 				for (String username : Cash.userCash.keySet()) {
 					br.write(username + ":" + Cash.userCash.get(username) + "\n"); 
 				}
-				message = SendableTextMessage.builder().message("Test").build();
+				message = SendableTextMessage.builder().message("Test3").build();
 				telegramBot.sendMessage(event.getChat(), message);
 			} catch (IOException e) {
 				e.getMessage();
+				message = SendableTextMessage.builder().message("Error").build();
+				telegramBot.sendMessage(event.getChat(), message);
 			}
 		}
 	}
